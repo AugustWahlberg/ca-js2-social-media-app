@@ -1,8 +1,16 @@
 //Bootstrap variables overrides
-@import "variables.scss";
+@import "_variables";
 
 //Bootstrap Styles
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 //Orginal styles
-@import "./error-message.scss";
+@import "./forms.scss";
+
+@import "./body.scss";
+
+@import "./components.scss";
+
+@import "./images.scss";
+
+@import "./icons.scss"
