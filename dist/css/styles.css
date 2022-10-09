@@ -10789,6 +10789,7 @@ textarea.form-control-lg {
 }
 
 .form-error {
+  color: #550000;
   display: none;
 }
 

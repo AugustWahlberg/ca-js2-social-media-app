@@ -15,7 +15,16 @@ const response = await fetch (registerURL, {
 })
 
 const result = await response.json();
-alert("You are now registered")
+//alert("You are now registered")
 //console.log(result)
-return result
+//return result
+
+
+if (!result.message) {
+  alert("You have successfullt registered a user");
+}
+
+else if (result.message){
+  alert (result.message)
+}
 }
