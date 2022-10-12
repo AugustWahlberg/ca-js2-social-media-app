@@ -10833,11 +10833,6 @@ body {
   padding-left: 30px;
 }
 
-.card {
-  margin: 0 auto;
-  max-width: 650px;
-}
-
 .min-mx-post {
   min-width: 300px;
   max-width: 500px;
@@ -10855,18 +10850,30 @@ body {
   color: hsl(218deg, 81%, 85%);
 }
 
-#bannerID, #userPostsFeed {
-  margin-top: 65px;
+#bannerIDProfile, #bannerID {
+  margin-top: 60px;
 }
 
 .purple {
   color: #D3E1E3;
 }
 
-.profilepic {
-  width: 240px;
-  border: none;
-  border-radius: 6px;
+.img-banner {
+  height: 200px;
+}
+
+#cardBanner, #createPost {
+  margin: 0 auto;
+  width: 500px;
+}
+
+@media only screen and (max-width: 520px) {
+  #cardBanner, #createPost {
+    width: auto;
+  }
+}
+.post {
+  cursor: pointer;
 }
 
 .img-thumbnail-post {
