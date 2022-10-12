@@ -14,12 +14,11 @@
     //console.log(postData.author)
     banner.innerHTML = ` <div class="row">
     <div class="col-md-6 " id="img-feed">
-      <img src="${examplePhoto}" class="img-fluid rounded-start" alt="...">
+      <img src="${avatar}" class="img-fluid rounded-start" alt="...">
     </div>
 
-    <div class="col-md-6 ps-4 pt-2">
+    <div class="col-md-6 ps-4">
     <h4 class="p-2" id="usernane-logged-in"><b>@${name}</b></h4>
-    <div class="col-4"><a href="../profile/login/">log out</a></div>
     
       <div class="col-md-8">
       <i class="bi bi-sticky-fill text-primary"></i>
@@ -43,7 +42,6 @@
         </div>
         </div>       
   `;
-     
     }
     
     export function renderProfileTemplate(profileData){

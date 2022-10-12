@@ -1,11 +1,10 @@
 
 import { setRegisterFormListener } from "./handlers/register.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
-
 import * as templates from "./templates/index.mjs"
 import * as postMethods from "./api/posts/index.mjs"
-//import { searchPosts } from "./api/posts/search.js";
 import { getProfileBanner } from "./api/user/index.mjs";
+//import { searchPosts } from "./api/posts/search.js";
 
 
 
@@ -33,6 +32,9 @@ if (path === '/profile/login/') {
 }
 
 
+if (path === '/feed/') {
+  viewPosts()
+}
 
   async function viewPosts (){
     const posts = await postMethods.getPosts();
@@ -41,8 +43,6 @@ if (path === '/profile/login/') {
     templates.renderPostTemplates(posts, container)
     //searchPosts(posts);
   }
-
- viewPosts()
 
 
 
@@ -56,15 +56,18 @@ if (path === '/profile/login/') {
 viewBanner()
 
 
-//  async function viewUserPosts (){
-//    const userPosts = await postMethods.getPostsUser();
-//    console.log(userPosts)
-//    const container = document.querySelector("#userPostsFeed")
-//    templates.renderPostTemplates(userPosts, container)
-//    //searchPosts(posts);
-//  }
+if (path === '/profile/') {
+  viewUserPosts()
+}
 
-// //  viewUserPosts()
+async function viewUserPosts (){
+    const userPosts = await postMethods.getPostsUser();
+   console.log(userPosts)
+    const container = document.querySelector("#userPostsFeed")
+    templates.renderPostUserTemplates(userPosts, container)
+    //searchPosts(posts);
+  }
+
 
 
 
