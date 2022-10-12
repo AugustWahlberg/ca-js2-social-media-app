@@ -10817,7 +10817,6 @@ body {
 }
 
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
@@ -10854,6 +10853,14 @@ body {
 
 .text-blue-muted {
   color: hsl(218deg, 81%, 85%);
+}
+
+#bannerID, #userPostsFeed {
+  margin-top: 65px;
+}
+
+.purple {
+  color: #D3E1E3;
 }
 
 .profilepic {

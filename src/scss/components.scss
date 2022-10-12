@@ -21,7 +21,6 @@
   max-width: 500px ;
 }
 
-
 .muted-border {
   border:solid 1px rgba(0 0 0.175);
 }
@@ -32,4 +31,12 @@
 
 .text-blue-muted {
   color: hsl(218, 81%, 85%);
+}
+
+#bannerID, #userPostsFeed{
+  margin-top:65px;
+}
+
+.purple {
+  color: #D3E1E3;
 }
