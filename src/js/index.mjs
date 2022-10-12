@@ -48,7 +48,7 @@ if (path === '/feed/') {
 
  async function viewBanner (){
   const profile = await getProfileBanner();
-  console.log(profile)
+  //console.log(profile)
   const feed = document.querySelector("#bannerID")
   templates.renderProfileTemplate(profile, feed)
 }
@@ -56,45 +56,6 @@ if (path === '/feed/') {
 viewBanner()
 
 
-if (path === '/profile/') {
-  viewUserPosts()
-}
+const post = document.getElementById("5482")
 
-async function viewUserPosts (){
-    const userPosts = await postMethods.getPostsUser();
-   console.log(userPosts)
-    const container = document.querySelector("#userPostsFeed")
-    templates.renderPostUserTemplates(userPosts, container)
-    //searchPosts(posts);
-  }
-
-
-
-
-
-
-
-//postMethods.getPost(3781).then(console.log);
-
-//Denne funker
-
-/*
-createPost({
-  title: "My third post",
-  body: "Happy sunday "
-}) */
-
-// Denne funker også
-
-/*
-updatePost({
-  id: 3780,
-  title: "My second post updated",
-  body: "Happy sunday updated "
-}) */
-
-//post.getPost(3781).then(console.log);
-//post.getPosts().then(console.log);
-//post.updatePost(3781);
-//post.removePost(3780);
-//post.createPost();
+console.log(post)

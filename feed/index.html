@@ -24,16 +24,40 @@
         />
       </a>
     </div>
-    <a class="pe-4"href="../profile/login/">log out</a>
+    <a class="p-2 position-absolute" href="../profile/login/"><small>log out</small> </a>
   </nav>
   </header>
 
 <body>
-  <header id="bannerID">
 
-    <div class="card y-auto bg-secondary text-primary" id="profileBanner">
+  <section id="bannerID">
+
+    <div id="profileBanner">
       
     </div>
+  </section>
+
+
+    <form class="bg-info col-sm-8 col-md-6 col-lg-4 m-auto mt-1 p-2 rounded" id="createPost">
+      <div class="form-outline col-10 m-auto m-auto">
+        <input class="form-control" id="textAreaExample" placeholder="Title"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+
+
+      <div class="form-outline col-10 m-auto">
+        <textarea class="form-control" id="textAreaExample" placeholder="Write something"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+
+      <div class="form-outline col-10 m-auto">
+        <input class="form-control" id="textAreaExample" placeholder="Tag"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+      <div class="text-center"> <button class="btn btn-primary" id="newQuote">Create new post</button></div>     
+        
+    </form>
+  
 
   <form class="form-inline my-3 row m-0 justify-content-center min-mx-post m-auto">
     <div class="col-7">
@@ -48,9 +72,11 @@
     <option value="oldest" id="filterByOldest">Oldest posts</option>
 </select>
   </form>
-</header>
+
+
 
 <main>
+
   <!--posts goes here-->
 <div class="container" id="postfeed">
 

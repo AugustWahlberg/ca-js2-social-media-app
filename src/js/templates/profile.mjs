@@ -12,35 +12,39 @@
     const banner = document.querySelector("#profileBanner")
     
     //console.log(postData.author)
-    banner.innerHTML = ` <div class="row">
-    <div class="col-md-6 " id="img-feed">
-      <img src="${avatar}" class="img-fluid rounded-start" alt="...">
+    banner.innerHTML = ` 
+        
+        <div class="card col-12 bg-secondary" id="cardBanner">
+  <div class="row g-0">
+    <div class="col-5">
+      <img
+        src="${examplePhoto}"
+        alt="Profile photo"
+        class="img-fluid rounded-start"
+      />
     </div>
 
-    <div class="col-md-6 ps-4">
-    <h4 class="p-2" id="usernane-logged-in"><b>@${name}</b></h4>
+    <div class="col">
+      <div class="card-body">
+        <h5 class="card-title"><b>@${name}</b></h5>
+        <div class="col-md-8">
+        <i class="bi bi-sticky-fill text-primary"></i>
+          <p class="card-text d-inline text-muted"">${numOnPosts} posts</p>
+          </div>
+          <div class="col">
+          <i class="bi bi-file-person-fill text-primary"></i>
+          <p class="card-text d-inline text-muted">${following} following</p>
+          </div>
+          
+          <div class="col">
+          <i class="bi bi-file-person text-primary"></i>
+          <p class="card-text d-inline text-muted"">${followers} followers</p>
+          </div>
     
-      <div class="col-md-8">
-      <i class="bi bi-sticky-fill text-primary"></i>
-        <p class="card-text d-inline text-muted"">${numOnPosts} posts</p>
-        </div>
-        <div class="col-md-8">
-        <i class="bi bi-file-person-fill text-primary"></i>
-        <p class="card-text d-inline text-muted">${following} following</p>
-        </div>
-        
-        <div class="col-md-8">
-        <i class="bi bi-file-person text-primary"></i>
-        <p class="card-text d-inline text-muted"">${followers} followers</p>
-        </div>
-  
-        <div class="row p-2 pt-4">
-        <button type="button" onclick="location.href='/profile'"  class="btn btn-dark col-10 me-2 d-block" id="goToProfile">Profile</button>
-        <button class="btn btn-dark col-10 mt-2" id="newQuote">New quote</button>
-      
-        </div>
-        </div>
-        </div>       
+          <div class="col-8 p-2 pt-4">
+          <button type="button" onclick="location.href='/profile'"  class="btn btn-dark col-10 me-2 d-block" id="goToProfile">Profile</button>
+      </div>
+    </div>
   `;
     }
     
@@ -49,3 +53,6 @@
     }
 
    
+
+
+        
