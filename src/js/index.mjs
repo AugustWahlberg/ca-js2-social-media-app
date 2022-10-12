@@ -54,8 +54,3 @@ if (path === '/feed/') {
 }
 
 viewBanner()
-
-
-const post = document.getElementById("5482")
-
-console.log(post)
