@@ -10839,14 +10839,9 @@ body {
   max-width: 650px;
 }
 
-.mx-mx-mx {
+.min-mx-post {
   min-width: 300px;
   max-width: 500px;
-}
-
-.mx-mx-mx-2 {
-  min-width: 300px;
-  max-width: 600px;
 }
 
 .muted-border {
@@ -10862,14 +10857,14 @@ body {
 }
 
 .profilepic {
-  width: 100px;
+  width: 240px;
   border: none;
   border-radius: 6px;
 }
 
 .img-thumbnail-post {
-  width: auto;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
 }
 
