@@ -1,13 +1,15 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 import { authFetch } from "../authFetch.mjs";
 
-const posts = "/posts";
+const action = "/posts";
 const allPostData = "/?_author=true&_comments=true&_reactions=true"
 
 export async function getPosts() {
-  const allPostsURL = `${API_SOCIAL_URL}${posts}${allPostData}`
+  const allPostsURL = `${API_SOCIAL_URL}${action}${allPostData}`
   const response = await authFetch (allPostsURL)
-  return await response.json();
+  const allPosts = await response.json()
+  // console.log(allPosts)
+  return allPosts;
 }
 
 export async function getPost(id) {
@@ -15,7 +17,7 @@ export async function getPost(id) {
   if (!id){
     throw new Error("Get requires a postID");
   }
-  const getPostURL = `${API_SOCIAL_URL}${posts}/${id}`;
+  const getPostURL = `${API_SOCIAL_URL}${action}/${id}`;
   const response = await authFetch (getPostURL)
   return await response.json();
 }

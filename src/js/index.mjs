@@ -7,7 +7,6 @@ import { getProfileBanner } from "./api/user/index.mjs";
 import { searchPosts } from "./api/posts/search.js";
 
 
-
 const path = location.pathname;
 
 if (path === '/index.html') {
@@ -31,24 +30,23 @@ if (path === '/profile/login/') {
   setRegisterFormListener()
 }
 
+  async function viewPosts (){
+    const posts = await postMethods.getPosts();
+    //console.log(posts)
+    const container = document.querySelector("#postfeed")
+    templates.renderPostTemplates(posts, container)
+    searchPosts(posts); 
+  }
 
+  
 if (path === '/feed/') {
   viewPosts()
 }
 
-  async function viewPosts (){
-    const posts = await postMethods.getPosts();
-    console.log(posts)
-    const container = document.querySelector("#postfeed")
-    templates.renderPostTemplates(posts, container)
-    searchPosts(posts);
-  }
-
-
 
  async function viewBanner (){
   const profile = await getProfileBanner();
-  //console.log(profile)
+  // console.log(profile)
   const feed = document.querySelector("#bannerID")
   templates.renderProfileTemplate(profile, feed)
 }

@@ -8,7 +8,7 @@
     const following = profileData.following.length;
     const avatar = profileData.avatar;
     const examplePhoto = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
-    console.log(avatar)
+    //console.log(avatar)
     const banner = document.querySelector("#profileBanner")
     
     //console.log(postData.author)

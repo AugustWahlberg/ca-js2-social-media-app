@@ -15,5 +15,4 @@ export function searchPosts(posts) {
         });
 
         getPosts(filteredPosts);
-    };
-}
+    }};
