@@ -4,6 +4,7 @@ export function postTemplate(postData) {
   const avatar = postData.author.avatar;
   const name = postData.author.name;
   const body = postData.body;
+  const title = postData.title;
   const tags = postData.tags;
   const reactions = postData._count.reactions;
   const comments = postData._count.comments;
@@ -22,6 +23,7 @@ export function postTemplate(postData) {
     <div class=" ps-2 pt-2 d-inline"> <em><b>${name}</b> </em> <p class="d-inline position-absolute mt-4 top-0 pe-3 end-0 h6"> ${created} </p></div> 
   </div>
   <div class="card-body text-success">
+      <h5> ${title} </h5>
     <p class="card-text text-primary">${body}</p>
   </div>
   <div class="card-footer bg-transparent border-success position-relative">

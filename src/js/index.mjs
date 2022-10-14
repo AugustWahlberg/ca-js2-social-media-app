@@ -4,7 +4,7 @@ import { setLoginFormListener } from "./handlers/login.mjs";
 import * as templates from "./templates/index.mjs"
 import * as postMethods from "./api/posts/index.mjs"
 import { getProfileBanner } from "./api/user/index.mjs";
-//import { searchPosts } from "./api/posts/search.js";
+import { searchPosts } from "./api/posts/search.js";
 
 
 
@@ -41,7 +41,7 @@ if (path === '/feed/') {
     console.log(posts)
     const container = document.querySelector("#postfeed")
     templates.renderPostTemplates(posts, container)
-    //searchPosts(posts);
+    searchPosts(posts);
   }
 
 
