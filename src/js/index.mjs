@@ -1,6 +1,6 @@
 
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
+import { setRegisterFormListener, setLoginFormListener, setCreatePostFormListener } from "./handlers/index.mjs";
+
 import * as templates from "./templates/index.mjs"
 import * as postMethods from "./api/posts/index.mjs"
 import { getProfileBanner } from "./api/user/index.mjs";
@@ -32,6 +32,10 @@ if (path === '/profile/login/') {
 } else if (path === '/profile/register/') {
   setRegisterFormListener()
 }
+
+// CREATE POST
+
+setCreatePostFormListener();
 
 
 // VIEW POSTS ON FEED
@@ -78,8 +82,8 @@ if (path === '/profile/') {
 }
 
 
-if(path.contains("/post")){
-  viewUserPosts()
-const id = path.split("/");
-console.log(id);
-}
+ if(path.contains("/post")){
+   viewUserPosts()
+ const id = path.split("/");
+ console.log(id);
+ }

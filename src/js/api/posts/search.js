@@ -2,7 +2,7 @@ import * as templates from "../../templates/index.mjs"
 
 export function searchPosts(posts) {
     const search = document.querySelector("#search");
-    console.log(search.value);
+    //console.log(search.value);
     search.onkeyup = function (event) {
         // console.log(event,posts);
 

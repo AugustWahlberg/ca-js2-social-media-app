@@ -18,7 +18,7 @@
   <div class="row g-0">
     <div class="col-5">
       <img
-        src="${examplePhoto}"
+        src="${avatar}"
         alt="Profile photo"
         class="img-fluid rounded-start"
       />

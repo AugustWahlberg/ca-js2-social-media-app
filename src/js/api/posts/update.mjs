@@ -18,7 +18,7 @@ export async function updatePost (postData) {
   })
 
   const post = await response.json();
-  console.log(post)
+  return post;
 
   // fjerne de to linjene over og sette inn: return await response.json();
 }

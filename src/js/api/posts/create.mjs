@@ -14,7 +14,5 @@ export async function createPost (postData) {
   })
 
   const post = await response.json();
-  console.log(post)
-
-  // fjerne de to linjene over og sette inn retunr await response.json();
+ return post;
 }

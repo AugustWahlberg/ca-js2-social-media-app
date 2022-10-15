@@ -77,9 +77,10 @@ export function UserPostsTemplate(userPostData) {
   console.log(userPostData);
   const post = document.createElement("div");
   const id = userPostData.id;
-  const avatar = userPostData.avatar;
+  // const avatar = userPostData.avatar;
   const name = userPostData.owner;
   const body = userPostData.body;
+  const title = userPostData.title;
   const tags = userPostData.tags;
   const reactions = userPostData?._count?.reactions
     ? userPostData?._count?.reaction
@@ -88,21 +89,25 @@ export function UserPostsTemplate(userPostData) {
     ? userPostData?._count?.comments
     : 0;
   const created = userPostData.created;
-  const examplePhoto =
-    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png";
+  // const examplePhoto =
+  //   "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png";
 
   post.classList.add("post");
   post.setAttribute("id", id);
 
   //console.log(postData.author)
-  post.innerHTML = ` <div class="row justify-content-center">
+  post.innerHTML = ` 
+  
+  <div class="row justify-content-center">
+ 
     <div class="col-12 col-md-8 col-lg-6 col-xl-5 min-mx-post">
   <div class="card border-success mb-3 bg-torquise text-info">
     <div class="card-header border-success">
-      <img src="${avatar}${examplePhoto}" class="img-thumbnail-post" alt="Profile picture micro">
+   
       <div class=" ps-2 pt-2 d-inline"> <em><b>${name}</b> </em> <p class="d-inline position-absolute mt-4 top-0 pe-3 end-0 h6"> ${created} </p></div> 
     </div>
     <div class="card-body text-success">
+    <h5> ${title} </h5>
       <p class="card-text text-primary">${body}</p>
     </div>
     <div class="card-footer bg-transparent border-success position-relative">
@@ -118,7 +123,11 @@ export function UserPostsTemplate(userPostData) {
   </div>
   </div>
   </div>
-  `;
+  `
+  post.append("button")
+  
+  
+  ;
 
   return post;
 }

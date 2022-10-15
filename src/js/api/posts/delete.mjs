@@ -16,5 +16,6 @@ export async function removePost (id) {
     method
   })
 
-  return await response.json();
+  const post = await response.json();
+  return post;
 }
