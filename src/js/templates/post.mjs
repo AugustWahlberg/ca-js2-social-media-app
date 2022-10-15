@@ -124,9 +124,6 @@ export function UserPostsTemplate(userPostData) {
   </div>
   </div>
   `
-  post.append("button")
-  
-  
   ;
 
   return post;
