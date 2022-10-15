@@ -10871,7 +10871,7 @@ a {
   height: 200px;
 }
 
-#cardBanner, #createPost {
+#cardBanner {
   margin: 0 auto;
   width: 500px;
 }
@@ -10881,10 +10881,6 @@ a {
     width: auto;
   }
 }
-.post {
-  cursor: pointer;
-}
-
 #postfeed {
   margin-bottom: 60px;
 }

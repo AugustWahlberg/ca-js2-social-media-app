@@ -38,21 +38,21 @@
 
     <form class="bg-info col-sm-8 col-md-6 col-lg-4 m-auto mt-1 p-2 rounded" id="createPost">
       <div class="form-outline col-10 m-auto m-auto">
-        <input class="form-control" id="textAreaExample" placeholder="Title"></textarea>
+        <input class="form-control" id="textAreaExample" placeholder="Title" name="title" required title="Please provide a title"> </textarea>
         <label class="form-label" for="textAreaExample"></label>
       </div>
 
 
       <div class="form-outline col-10 m-auto">
-        <textarea class="form-control" id="textAreaExample" placeholder="Write something"></textarea>
+        <textarea class="form-control" id="textAreaExample" placeholder="Write something" name="body" required title="Please provide a body"></textarea>
         <label class="form-label" for="textAreaExample"></label>
       </div>
 
       <div class="form-outline col-10 m-auto">
-        <input class="form-control" id="textAreaExample" placeholder="Tag"></textarea>
+        <input class="form-control" id="textAreaExample" placeholder="Tag" name="tags" title="Label your post with tags"></textarea>
         <label class="form-label" for="textAreaExample"></label>
       </div>
-      <div class="text-center"> <button class="btn btn-primary" id="newQuote">Create new post</button></div>      
+      <div class="text-center"> <button class="btn btn-primary" id="createPost">Create new post</button></div>      
     </form>
   
   <form class="form-inline my-3 row m-0 justify-content-center min-mx-post m-auto">

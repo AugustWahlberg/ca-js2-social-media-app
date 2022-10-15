@@ -39,7 +39,7 @@
   height: 200px;
 }
 
-#cardBanner, #createPost {
+#cardBanner {
   margin: 0 auto;
   width: 500px;
 }
@@ -51,9 +51,6 @@
   }
 }
 
-.post{
-  cursor: pointer;
-}
 
  #postfeed {
   margin-bottom: 60px;
