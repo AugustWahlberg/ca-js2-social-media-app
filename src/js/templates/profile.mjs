@@ -14,7 +14,7 @@
     //console.log(postData.author)
     banner.innerHTML = ` 
         
-        <div class="card col-12 bg-secondary" id="cardBanner">
+        <div class="card col-12 bg-secondary mb-2" id="cardBanner">
   <div class="row g-0">
     <div class="col-5">
       <img
