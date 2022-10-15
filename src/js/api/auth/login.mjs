@@ -4,6 +4,10 @@ import * as storage from "../../storage/index.mjs"
 const action = "/auth/login";
 const method = "post";
 
+/**
+ * Function to log in a user
+ * @param {object} profile 
+ */
 export async function login(profile){
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);
@@ -20,9 +24,7 @@ export async function login(profile){
   storage.save("token", accessToken);
   storage.save("profile", user);
 
-
   if (!user.message) {
-    //alert("You are now logged in");
     location.href = "/feed";
   }
 

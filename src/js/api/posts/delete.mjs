@@ -4,6 +4,11 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/posts";
 const method = "delete";
 
+/**
+ * Function to return a post to delete
+ * @param {number} id 
+ * @returns post to delete
+ */
 export async function removePost (id) {
 
   if (!id) {

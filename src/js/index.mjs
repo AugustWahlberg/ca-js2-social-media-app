@@ -1,12 +1,9 @@
-
 import { setRegisterFormListener, setLoginFormListener, setCreatePostFormListener } from "./handlers/index.mjs";
-
 import * as templates from "./templates/index.mjs"
 import * as postMethods from "./api/posts/index.mjs"
 import { getProfileBanner } from "./api/user/index.mjs";
 import { searchPosts } from "./api/posts/search.js";
 import { filterPosts } from "./api/posts/filterPosts.mjs";
-
 
 const path = location.pathname;
 
@@ -26,17 +23,11 @@ signInButton.addEventListener("click", event =>{
 })
 }
 
-
 if (path === '/profile/login/') {
   setLoginFormListener()
 } else if (path === '/profile/register/') {
   setRegisterFormListener()
 }
-
-// CREATE POST
-
-setCreatePostFormListener();
-
 
 // VIEW POSTS ON FEED
 
@@ -49,26 +40,21 @@ setCreatePostFormListener();
     filterPosts(posts)
   }
 
-  
 if (path === '/feed/') {
   viewPosts()
 }
-
 
 // VIEW BANNER
 
  async function viewBanner (){
   const profile = await getProfileBanner();
-  // console.log(profile)
   const feed = document.querySelector("#bannerID")
   templates.renderProfileTemplate(profile, feed)
 }
 
 viewBanner()
 
-
 // VIEW USERS POSTS
-
 
 async function viewUserPosts (){
   const user = await postMethods.getPostsUser();
@@ -81,9 +67,11 @@ if (path === '/profile/') {
   viewUserPosts()
 }
 
-
  if(path.contains("/post")){
    viewUserPosts()
  const id = path.split("/");
  console.log(id);
  }
+
+ // CREATE POST
+setCreatePostFormListener();

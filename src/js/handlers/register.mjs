@@ -2,7 +2,8 @@ import { register } from "../api/auth/register.mjs";
 
   /**
    * Register function to set input from the user into an object
-   * 
+   * if all the inputs are passed
+   * the profile will be register
   */
 export function setRegisterFormListener() {
  const form = document.querySelector("#registerForm");

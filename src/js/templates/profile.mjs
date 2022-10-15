@@ -1,5 +1,8 @@
 
-
+  /**
+   * Function that create a banner template of for a user 
+   * @param {object} profileData 
+   */
   export function bannerTemplate(profileData) {
     
     const name = profileData.name;
@@ -47,6 +50,11 @@
     </div>
   `;
     }
+
+   /**
+    * Function that display a banner of the logged in user
+    * @param {object} profileData 
+    */
     
     export function renderProfileTemplate(profileData){
       bannerTemplate(profileData)

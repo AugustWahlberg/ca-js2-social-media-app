@@ -1,11 +1,13 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 import { authFetch } from "../authFetch.mjs";
 
-
-//GET ALL POSTS
-
 const action = "/posts";
 const allPostData = "/?_author=true&_comments=true&_reactions=true"
+
+/**
+ * GET ALL POSTS
+ * @returns All posts (100 default)
+ */
 
 export async function getPosts() {
   const allPostsURL = `${API_SOCIAL_URL}${action}${allPostData}`;
@@ -15,12 +17,13 @@ export async function getPosts() {
   return allPosts;
 }
 
-// GET POSTS USER LOGGED IN
-
 const profiles = "/profiles/";
 const userPosts= "?_posts=true&_following=true&_followers=true"
 
-
+/**
+ * GET POSTS USER LOGGED IN
+ * @returns All posts from the logged in user
+ */
  export async function getPostsUser() {
    const profileData = JSON.parse(localStorage.getItem('profile'));
    const name = profileData.name;
@@ -29,9 +32,11 @@ const userPosts= "?_posts=true&_following=true&_followers=true"
    return await response.json();
  }
 
-
-
- // GET SINGLE POST
+ /**
+  * GET SINGLE POST
+  * @param {number} id 
+  * @returns Single post
+  */
 export async function getPost(id) {
 
   if (!id){

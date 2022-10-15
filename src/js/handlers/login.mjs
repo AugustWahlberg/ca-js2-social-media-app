@@ -1,6 +1,7 @@
 import { login } from "../api/auth/login.mjs";
   /**
    * Register function to set input from the user into an object
+   * The object created is then sent with the login function
    * 
   */
 export function setLoginFormListener() {

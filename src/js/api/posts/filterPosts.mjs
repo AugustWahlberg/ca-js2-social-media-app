@@ -1,5 +1,10 @@
-const filterSelect = document.querySelector("#filterSelect");
 import * as templates from "../../templates/index.mjs"
+const filterSelect = document.querySelector("#filterSelect");
+
+/**
+ * Function to filter the posts
+ * @param {array} posts 
+ */
 
 export function filterPosts(posts) {
   filterSelect.addEventListener("change", (e) => {

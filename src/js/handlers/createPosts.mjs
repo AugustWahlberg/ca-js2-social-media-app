@@ -4,7 +4,11 @@ const form = document.querySelector("#createPost")
 
 export function setCreatePostFormListener () {
 
-if (form) {
+/**
+ * Creating a post if the create post form is submitted
+ */
+
+  if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault ()
     const form = e.target;
