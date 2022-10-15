@@ -10813,13 +10813,22 @@ textarea.form-control-lg {
 body {
   background-color: #144D51;
   font-family: var(--body-font);
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
 
 .footer {
+  position: fixed !important;
+  margin-top: auto;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .searchbar {
@@ -10874,6 +10883,10 @@ body {
 }
 .post {
   cursor: pointer;
+}
+
+#postfeed {
+  margin-bottom: 60px;
 }
 
 .img-thumbnail-post {
