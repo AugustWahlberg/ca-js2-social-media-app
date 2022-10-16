@@ -40,20 +40,40 @@
       </form>
     </nav>
 
+   
     <div class="p-3" id="profileBanner">
 
       <!-- posts goes here -->
       
     </div>
+    <form class="bg-info col-sm-8 col-md-6 col-lg-4 m-auto mt-1 p-2 rounded" id="editPost">
+      <div class="form-outline col-10 m-auto m-auto">
+        <input class="form-control" id="editTitle" placeholder="Title" name="title" required title="Please provide a title"> </textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+  
+  
+      <div class="form-outline col-10 m-auto">
+        <textarea class="form-control" id="editBody" placeholder="Write something" name="body" required title="Please provide a body"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+  
+      <div class="form-outline col-10 m-auto">
+        <input class="form-control" id="editTags" placeholder="Tag" name="tags" title="Label your post with tags"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+      <div class="text-center"> <button class="btn btn-primary" id="editPost">Edit post</button></div>      
+    </form>
   </section>
+
 
 </div>
 
-<footer class="bg-info text-center text-lg-start footer position-absolute">
+<!-- <footer class="bg-info text-center text-lg-start footer position-absolute">
   <div class="text-center pt-3">
     © 2022 Copyright: <em>Parrotmania</em>
     </div>
-</footer>
+</footer> -->
 
 <script src="/src/js/index.mjs" type="module"></script>
   
