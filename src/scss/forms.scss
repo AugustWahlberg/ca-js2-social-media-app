@@ -1,0 +1,29 @@
+#feedback-reg, #feedback-login{
+  //color: $error-red;
+  padding: 10px;
+  background-color: $secondary;
+  background-color: rgba($secondary, $alpha: 0.1);
+  border-radius: 10px;
+  }
+  
+  .form-error{
+    color: #550000;
+    display: none;
+  }
+  
+  #feedback-reg{
+    display: none;
+  }
+
+  $torquise: #4F7A7D;
+  
+  #login-card, #sign-up-card{
+    border-radius: 5px;
+    background-color: $torquise;
+  }
+  .torquise {
+    color: $torquise;
+  }
+  .bg-torquise {
+    background-color: $torquise;
+  }

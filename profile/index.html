@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parrotmania | Profile</title>
+  <link rel="stylesheet" href="/dist/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <header>
+  <nav class="navbar navbar-light bg-info fixed-top">
+    <div class="container justify-content-center">
+      <a class="navbar-brand" href="/feed/">
+        <img
+          src="/images/wordmark-logo.png"
+          height="20"
+          alt="PM Wordmark Logo"
+          loading="lazy"
+        />
+      </a>
+    </div>
+    <a class="p-2 position-absolute"href="../profile/login/">log out</a>
+  </nav>
+  </header>  
+
+  <section class="mb-4" id="bannerIDProfile">
+
+    <nav class="navbar jus">
+      <form class="container-fluid justify-content-center mt-2">
+        <button class="btn me-1 text-info" type="button" onclick="location.href='/feed'" ><i class="bi 2x bi-arrow-bar-left"></i>Main</button>
+        <button class="btn btn-secondary me-1" type="button">Posts</button>
+        <button class="btn btn-outline-success me-1" type="button" onclick="location.href='profile-settings.html'">Settings</button>
+        
+      </form>
+    </nav>
+
+   
+    <div class="p-3" id="profileBanner">
+
+      <!-- posts goes here -->
+      
+    </div>
+    <form class="bg-info col-sm-8 col-md-6 col-lg-4 m-auto mt-1 p-2 rounded" id="editPost">
+      <div class="form-outline col-10 m-auto m-auto">
+        <input class="form-control" id="editTitle" placeholder="Title" name="title" required title="Please provide a title"> </textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+  
+  
+      <div class="form-outline col-10 m-auto">
+        <textarea class="form-control" id="editBody" placeholder="Write something" name="body" required title="Please provide a body"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+  
+      <div class="form-outline col-10 m-auto">
+        <input class="form-control" id="editTags" placeholder="Tag" name="tags" title="Label your post with tags"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+      <div class="text-center"> <button class="btn btn-primary" id="editPost">Edit post</button></div>      
+    </form>
+  </section>
+
+
+</div>
+
+<!-- <footer class="bg-info text-center text-lg-start footer position-absolute">
+  <div class="text-center pt-3">
+    © 2022 Copyright: <em>Parrotmania</em>
+    </div>
+</footer> -->
+
+<script src="/src/js/index.mjs" type="module"></script>
+  
+</body>
+</html>

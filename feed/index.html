@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parrotmania | Feed </title>
+  <link rel="stylesheet" href="/dist/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+</head>
+
+<header>
+  <nav class="navbar navbar-light bg-info fixed-top">
+    <div class="container justify-content-center">
+      <a class="navbar-brand" href="/feed/">
+        <img
+          src="/images/wordmark-logo.png"
+          height="20"
+          alt="PM Wordmark Logo"
+          loading="lazy"
+        />
+      </a>
+    </div>
+    <a class="p-2 position-absolute" href="../profile/login/"><small>log out</small> </a>
+  </nav>
+  </header>
+<body>
+
+  <section id="bannerID">
+
+    <div id="profileBanner">
+      
+    </div>
+  </section>
+
+    <form class="bg-info col-sm-8 col-md-6 col-lg-4 m-auto mt-1 p-2 rounded" id="createPost">
+      <div class="form-outline col-10 m-auto m-auto">
+        <input class="form-control" id="textAreaExample" placeholder="Title" name="title" required title="Please provide a title"> </textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+
+
+      <div class="form-outline col-10 m-auto">
+        <textarea class="form-control" id="textAreaExample" placeholder="Write something" name="body" required title="Please provide a body"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+
+      <div class="form-outline col-10 m-auto">
+        <input class="form-control" id="textAreaExample" placeholder="Tag" name="tags" title="Label your post with tags"></textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>
+      <div class="text-center"> <button class="btn btn-primary" id="createPost">Create new post</button></div>      
+    </form>
+  
+  <form class="form-inline my-3 row m-0 justify-content-center min-mx-post m-auto">
+    <div class="col-7">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search">
+  </div>
+  <select class="col-3 d-block mx-3 " id="filterSelect">
+    <option value="">Filter</option>
+    <option value="newest" id="filterByLatestPosts">Latest posts</option>
+    <option value="oldest" id="filterByOldest">Oldest posts</option>
+</select>
+  </form>
+
+<main>
+
+  <!--posts goes here-->
+<div class="container" id="postfeed">
+
+</div>
+
+<footer class="bg-info text-center text-lg-start footer">
+  <div class="text-center pt-3">
+    © 2022 Copyright: <em>Parrotmania</em>
+    </div>
+</footer>
+
+</main>
+
+<script src="/src/js/index.mjs" type="module"></script>
+
+</body>
+</html>

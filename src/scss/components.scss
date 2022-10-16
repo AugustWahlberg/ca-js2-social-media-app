@@ -1,0 +1,57 @@
+.searchbar{
+  width: 260px;
+  margin: 0 auto;
+}
+
+ .mb-3 a {
+  color: rgba($secondary, $alpha: 0.8);
+  display: inline-flex;
+  padding-left: 30px;
+}
+
+
+.min-mx-post{
+  min-width: 300px ;
+  max-width: 500px ;
+}
+
+.muted-border {
+  border:solid 1px rgba(0 0 0.175);
+}
+
+.text-blue{
+  color: #8CB1F3;
+}
+
+.text-blue-muted {
+  color: hsl(218, 81%, 85%);
+}
+
+#bannerIDProfile, #bannerID {
+  margin-top: 60px;
+}
+
+.purple {
+  color: #D3E1E3;
+}
+
+.img-banner {
+  height: 200px;
+}
+
+#cardBanner {
+  margin: 0 auto;
+  width: 500px;
+}
+
+
+@media only screen and (max-width: 520px) {
+  #cardBanner, #createPost {
+    width: auto;
+  }
+}
+
+
+ #postfeed {
+  margin-bottom: 60px;
+}
